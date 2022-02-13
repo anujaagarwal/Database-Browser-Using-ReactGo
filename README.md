@@ -18,7 +18,7 @@
 
   # About the folder structure
 
-  - Frontend Folder in the project has all react code and bacend folder has Go code.
+  - Frontend Folder in the project has all react code and backend folder has Go code.
 
   # Overall Challenge faced
 
