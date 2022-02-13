@@ -8,8 +8,8 @@
   * [Learnings](#learnings)
   * [Experience](#Experience)
   * [Steps To Get Started](#STEPS-to-get-started)
-  * [Here is what it looks like!](#Here-is-what-it-looks-like)
-  * [Working site link](#working-site-link)
+
+
 
 
   # About the project
