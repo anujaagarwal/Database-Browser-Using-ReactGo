@@ -57,7 +57,7 @@
   - Postgres latest version should be installed
   - Go latest version should be installed
 
-  ### Running the Flask App
+  ### Running the Go App
   Run the server-side Go app in one terminal window:
 
   ```sh
@@ -75,8 +75,8 @@
   - Node >= v8.0.0
   - npm >= 6.14.8
 
-  ### Running the Vue App
-  Run the client-side Vue app in a different terminal window:
+  ### Running the React App
+  Run the client-side React app in a different terminal window:
   ```sh
   $ cd my-app/Frontend
   ```
