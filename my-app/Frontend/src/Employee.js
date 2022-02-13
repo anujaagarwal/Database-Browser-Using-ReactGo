@@ -1,8 +1,10 @@
+// imports
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import BootstrapTable from 'reactjs-bootstrap-table';
 
-
+// functional component
 function Employee() {
     useEffect(() => {
         getEmployees()
@@ -80,6 +82,7 @@ function Employee() {
     display: "Email"
     }
 ]
+// jsx below
 
 return (
     <div className="App">

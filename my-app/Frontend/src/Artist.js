@@ -1,9 +1,10 @@
+// imports
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import BootstrapTable from 'reactjs-bootstrap-table';
 
 
-
+// functional component
 function Artist() {
     useEffect(() => {
         getArtists()
@@ -63,7 +64,7 @@ function Artist() {
         display: "Playlist Name"
         }
     ]
-
+    // jsx below
     return (
         <div className="Artist">
             {<BootstrapTable tableClass={"table"} resize={{}} headers = {true} columns={artistColumns} data={artistData} />}

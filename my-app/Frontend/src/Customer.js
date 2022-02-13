@@ -1,8 +1,9 @@
+// imports
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import BootstrapTable from 'reactjs-bootstrap-table';
 
-
+// functional component
 function Customer() {
     useEffect(() => {
         getCustomers()
@@ -83,7 +84,7 @@ function Customer() {
           display: "Quantity"
         }
     ]
-
+    //  jsx below
     return (
       <div className="Customer">
           {<BootstrapTable tableClass={"table"} headers = {true} columns={customerColumns} data={customerData} />}

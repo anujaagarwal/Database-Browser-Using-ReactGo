@@ -1,5 +1,6 @@
 package middleware
 
+// imported packages
 import (
 	"database/sql"
 	"encoding/json"
@@ -11,6 +12,7 @@ import (
 	_ "github.com/lib/pq"
 )
 
+// postgres database server details
 const (
 	host     = "localhost"
 	port     = 5432
@@ -18,6 +20,8 @@ const (
 	password = "anuja"
 	dbname   = "testdb"
 )
+
+// setting up connection with the db
 
 func setupDB() *sql.DB {
 	//connection string
@@ -54,7 +58,7 @@ func GetActors(w http.ResponseWriter, r *http.Request) {
 				JOIN categories
 				ON categories.id = film_category.category_id`
 
-	// Get all movies from movies table that don't have movieID = "1"
+	// Get all actors by joining film and category tables with it based on foreign key.
 	rows, err := db.Query(query1)
 
 	// check errors
@@ -63,7 +67,7 @@ func GetActors(w http.ResponseWriter, r *http.Request) {
 	// var response []JsonResponse
 	var actors []models.Actor
 
-	// Foreach movie
+	// Foreach actor
 	for rows.Next() {
 		var id string
 		var actor_first_name string
@@ -90,6 +94,7 @@ func GetActors(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(response)
 }
 
+// Get all Artists
 func GetArtists(w http.ResponseWriter, r *http.Request) {
 	enableCors(&w)
 	db := setupDB()
@@ -116,7 +121,7 @@ func GetArtists(w http.ResponseWriter, r *http.Request) {
 				JOIN playlists
 				ON playlists.id = playlist_track.playlist_id`
 
-	// Get all movies from movies table that don't have movieID = "1"
+	// Get all artists from artists table and joining tables like album, genre, playlist and track with it.
 	rows, err := db.Query(query2)
 
 	// check errors
@@ -125,7 +130,7 @@ func GetArtists(w http.ResponseWriter, r *http.Request) {
 	// var response []JsonResponse
 	var artists []models.Artist
 
-	// Foreach movie
+	// Foreach artist
 	for rows.Next() {
 		var id string
 		var artist_name string
@@ -150,6 +155,8 @@ func GetArtists(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(response)
 }
 
+// Get all customers
+
 func GetCustomers(w http.ResponseWriter, r *http.Request) {
 	enableCors(&w)
 	db := setupDB()
@@ -173,7 +180,7 @@ func GetCustomers(w http.ResponseWriter, r *http.Request) {
 				JOIN invoice_lines
 				ON invoice_lines.invoice_id = invoices.id`
 
-	// Get all movies from movies table that don't have movieID = "1"
+	// Get all customers from customer table by joining invoice table with it.
 	rows, err := db.Query(query3)
 
 	// check errors
@@ -182,7 +189,7 @@ func GetCustomers(w http.ResponseWriter, r *http.Request) {
 	// var response []JsonResponse
 	var customers []models.Customer
 
-	// Foreach movie
+	// Foreach customer
 	for rows.Next() {
 		var id string
 		var customer_first_name string
@@ -213,6 +220,8 @@ func GetCustomers(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(response)
 }
 
+// Get all employees
+
 func GetEmployees(w http.ResponseWriter, r *http.Request) {
 	enableCors(&w)
 	db := setupDB()
@@ -221,7 +230,7 @@ func GetEmployees(w http.ResponseWriter, r *http.Request) {
 
 	query4 := `SELECT * FROM employees`
 
-	// Get all movies from movies table that don't have movieID = "1"
+	// Get all employee from employees table.
 	rows, err := db.Query(query4)
 
 	// check errors
@@ -230,7 +239,7 @@ func GetEmployees(w http.ResponseWriter, r *http.Request) {
 	// var response []JsonResponse
 	var employees []models.Employee
 
-	// Foreach movie
+	// Foreach employee
 	for rows.Next() {
 		var id string
 		var last_name string
@@ -261,17 +270,22 @@ func GetEmployees(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(response)
 }
 
+// Function for handling messages
+
 func printMessage(message string) {
 	fmt.Println("")
 	fmt.Println(message)
 	fmt.Println("")
 }
 
+// Function for handling errors
 func CheckError(err error) {
 	if err != nil {
 		panic(err)
 	}
 }
+
+// function to enable cors
 
 func enableCors(w *http.ResponseWriter) {
 	(*w).Header().Set("Access-Control-Allow-Origin", "*")

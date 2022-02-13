@@ -1,15 +1,15 @@
+// imports
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import Actor from './Actor';
 import Artist from './Artist';
 import Customer from './Customer';
 import Employee from './Employee';
-// import Table from "./Table";
 require('bootstrap/dist/css/bootstrap.css');
 
 
 
-
+// App function
 function App() {
   return (
     <div className="App">

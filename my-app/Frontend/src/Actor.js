@@ -1,10 +1,11 @@
+// imports
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import BootstrapTable from 'reactjs-bootstrap-table';
 
 
 
-
+// functional component
 function Actor() {
     useEffect(() => {
         getActors()
@@ -22,21 +23,6 @@ function Actor() {
         console.log(err)
         })
     }
-
-
-
-let data = [
-   { id: 1, 'firstName': '...', lastName: '...', address: '...'},
-   { id: 2, 'firstName': '...', lastName: '...', address: '...'},
-]
-
-
-
-let columns = [
-    {name: 'firstName' },
-    {name: 'lastName' },
-    {name: 'address' }
-  ]
   
 
     const actorColumns = [
@@ -84,10 +70,7 @@ let columns = [
         }
     ]
 
-
-
-
-
+// jsx below
     return (
     <div className="Actor">
         {<BootstrapTable tableClass={"table"} resize={{extra: 200}} headers = {true} columns={actorColumns} data={actorData} />}
