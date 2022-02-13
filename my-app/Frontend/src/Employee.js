@@ -85,7 +85,7 @@ function Employee() {
 // jsx below
 
 return (
-    <div className="App">
+    <div className="table-container">
        {<BootstrapTable tableClass={"table"} headers = {true} columns={employeeColumns} data={employeeData} />}
 
     </div>

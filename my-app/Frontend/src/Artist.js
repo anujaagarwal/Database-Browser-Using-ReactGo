@@ -66,8 +66,8 @@ function Artist() {
     ]
     // jsx below
     return (
-        <div className="Artist">
-            {<BootstrapTable tableClass={"table"} resize={{}} headers = {true} columns={artistColumns} data={artistData} />}
+        <div className="table-container">
+            {<BootstrapTable tableClass={"table"} headers = {true} columns={artistColumns} data={artistData} />}
         </div>
       );
     }

@@ -16,13 +16,15 @@ function Customer() {
         axios.get(`${url}customers/`)
         .then(res => {
           const allCustomers = res.data
-          setData(getCustomers.data)
+          setData(allCustomers.data)
           console.log(allCustomers.data)
         }).catch(err => {
           console.log(err)
         })
     
       }
+
+      console.log(customerData)
 
       const customerColumns = [
         {
@@ -86,7 +88,7 @@ function Customer() {
     ]
     //  jsx below
     return (
-      <div className="Customer">
+      <div className="table-container">
           {<BootstrapTable tableClass={"table"} headers = {true} columns={customerColumns} data={customerData} />}
       </div>
       );

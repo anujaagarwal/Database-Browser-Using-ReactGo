@@ -72,8 +72,8 @@ function Actor() {
 
 // jsx below
     return (
-    <div className="Actor">
-        {<BootstrapTable tableClass={"table"} resize={{extra: 200}} headers = {true} columns={actorColumns} data={actorData} />}
+    <div className="table-container">
+        {<BootstrapTable tableClass={"table"} headers = {true} columns={actorColumns} data={actorData} />}
     </div>
     );
 }
