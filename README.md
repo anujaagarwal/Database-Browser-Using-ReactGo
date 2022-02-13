@@ -18,7 +18,7 @@
 
   # About the folder structure
 
-  - Frontend Folder in the project has all react code and backend folder has Go code.
+  - Frontend Folder in the project has all react code and GoProject folder has Go code.
 
   # Overall Challenge faced
 
@@ -61,7 +61,7 @@
   Run the server-side Go app in one terminal window:
 
   ```sh
-  $ cd my-app/Backend/GoProject/go-server
+  $ cd my-app/GoProject/go-server
   ```
   ```sh
   $ go run main.go
