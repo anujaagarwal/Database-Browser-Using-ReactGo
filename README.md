@@ -54,7 +54,8 @@
   ### Requirements
   - docker
   - docker-compose
-
+ 
+  ### Development Setup
 
   ```sh
   $ docker-compose up
