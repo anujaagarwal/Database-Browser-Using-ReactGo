@@ -51,40 +51,14 @@
 
   Step 1:Fork/Clone
 
-  ## Backend
+  ### Requirements
+  - docker
+  - docker-compose
 
-  ### Prerequisities
-  - Postgres latest version should be installed
-  - Go latest version should be installed
-
-  ### Running the Go App
-  Run the server-side Go app in one terminal window:
 
   ```sh
-  $ cd my-app/GoProject/go-server
+  $ docker-compose up
   ```
-  ```sh
-  $ go run main.go
-  ```
-  Navigate to [This fetch data from the postgres database](http://localhost:8000/(actors/ || artists/ || customers/ || employees/)
-
-  ## Frontend
-
-  ### Prerequisities
-
-  - Node >= v8.0.0
-  - npm >= 6.14.8
-
-  ### Running the React App
-  Run the client-side React app in a different terminal window:
-  ```sh
-  $ cd my-app/Frontend
-  ```
-  ```sh
-  $ npm install
-  ```
-  ```sh
-  $ npm run serve
-  ```
+ 
 
   Navigate to [Yeah! you can see my web app](http://localhost:3000)
