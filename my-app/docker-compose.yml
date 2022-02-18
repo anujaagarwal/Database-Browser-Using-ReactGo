@@ -1,0 +1,38 @@
+version: '3.8'
+services:
+    postgres:
+        image: postgres
+        restart: always
+        environment:
+            - POSTGRES_DB=testdb
+            - POSTGRES_PASSWORD=anuja
+    server:
+        build: ./GoProject/go-server
+        command: go run main.go
+        volumes:
+            - ./GoProject/go-server:/go/src/app
+        ports:
+            - "8080:3000"
+
+        depends_on:
+            - postgres
+        environment:
+            - POSTGRES_PASSWORD=anuja
+    client:
+        build: ./Frontend
+        command: npm start
+        volumes:
+            - ./Frontend:/usr/src/app
+            # mount node_modules as a workaround for it disappearing
+            # after adding /client as a mounted folder
+            - /usr/src/app/node_modules
+
+        ports:
+            - "9000:3000"
+        depends_on: 
+            - server
+
+
+
+   
+    
