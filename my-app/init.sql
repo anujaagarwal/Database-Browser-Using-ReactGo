@@ -4484,7 +4484,7 @@ INSERT INTO tracks (id, track_name, album_id, media_type_id, genre_id, track_com
 INSERT INTO tracks (id, track_name, album_id, media_type_id, genre_id, track_composer, track_milliseconds, bytes, unit_price) VALUES (3502, N'Quintet for Horn, Violin, 2 Violas, and Cello in E Flat Major, K. 407/386c: III. Allegro', 346, 2, 24, N'Wolfgang Amadeus Mozart', 221331, 3665114, 0.99);
 INSERT INTO tracks (id, track_name, album_id, media_type_id, genre_id, track_composer, track_milliseconds, bytes, unit_price) VALUES (3503, N'Koyaanisqatsi', 347, 2, 10, N'Philip Glass', 206005, 3305164, 0.99);
 
-INSERT INTO employees (id, last_name, first_name, title, birth_date, hire_date, address, city, state, country, postal_code, phone, fax, email) VALUES (1, N'Adams', N'Andrew', N'General Manager', '1962/2/18', '2002/8/14', N'11120 Jasper Ave NW', N'Edmonton', N'AB', N'Canada', N'T5K 2N1', N'+1 (780) 428-9482', N'+1 (780) 428-3457', N'andrew@chinookcorp.com');
+INSERT INTO employees (id, last_name, first_name, title, reports_to, birth_date, hire_date, address, city, state, country, postal_code, phone, fax, email) VALUES (1, N'Adams', N'Andrew', N'General Manager', 1, '1962/2/18', '2002/8/14', N'11120 Jasper Ave NW', N'Edmonton', N'AB', N'Canada', N'T5K 2N1', N'+1 (780) 428-9482', N'+1 (780) 428-3457', N'andrew@chinookcorp.com');
 INSERT INTO employees (id, last_name, first_name, title, reports_to, birth_date, hire_date, address, city, state, country, postal_code, phone, fax, email) VALUES (2, N'Edwards', N'Nancy', N'Sales Manager', 1, '1958/12/8', '2002/5/1', N'825 8 Ave SW', N'Calgary', N'AB', N'Canada', N'T2P 2T3', N'+1 (403) 262-3443', N'+1 (403) 262-3322', N'nancy@chinookcorp.com');
 INSERT INTO employees (id, last_name, first_name, title, reports_to, birth_date, hire_date, address, city, state, country, postal_code, phone, fax, email) VALUES (3, N'Peacock', N'Jane', N'Sales Support Agent', 2, '1973/8/29', '2002/4/1', N'1111 6 Ave SW', N'Calgary', N'AB', N'Canada', N'T2P 5M5', N'+1 (403) 262-3443', N'+1 (403) 262-6712', N'jane@chinookcorp.com');
 INSERT INTO employees (id, last_name, first_name, title, reports_to, birth_date, hire_date, address, city, state, country, postal_code, phone, fax, email) VALUES (4, N'Park', N'Margaret', N'Sales Support Agent', 2, '1947/9/19', '2003/5/3', N'683 10 Street SW', N'Calgary', N'AB', N'Canada', N'T2P 5G3', N'+1 (403) 263-4423', N'+1 (403) 263-4289', N'margaret@chinookcorp.com');
@@ -4497,21 +4497,21 @@ INSERT INTO customers (id, customer_first_name, customer_last_name, customer_com
 INSERT INTO customers (id, customer_first_name, customer_last_name, address, city, country, postal_code, customer_phone, customer_email, support_rep_id) VALUES (2, N'Leonie', N'Köhler', N'Theodor-Heuss-Straße 34', N'Stuttgart', N'Germany', N'70174', N'+49 0711 2842222', N'leonekohler@surfeu.de', 5);
 INSERT INTO customers (id, customer_first_name, customer_last_name, address, city, state, country, postal_code, customer_phone, customer_email, support_rep_id) VALUES (3, N'François', N'Tremblay', N'1498 rue Bélanger', N'Montréal', N'QC', N'Canada', N'H2G 1A7', N'+1 (514) 721-4711', N'ftremblay@gmail.com', 3);
 INSERT INTO customers (id, customer_first_name, customer_last_name, address, city, country, postal_code, customer_phone, customer_email, support_rep_id) VALUES (4, N'Bjørn', N'Hansen', N'Ullevålsveien 14', N'Oslo', N'Norway', N'0171', N'+47 22 44 22 22', N'bjorn.hansen@yahoo.no', 4);
-INSERT INTO customers (id, customer_first_name, customer_last_name, customer_company, address, city, country, postal_code, phone, fax, email, support_rep_id) VALUES (5, N'František', N'Wichterlová', N'JetBrains s.r.o.', N'Klanova 9/506', N'Prague', N'Czech Republic', N'14700', N'+420 2 4172 5555', N'+420 2 4172 5555', N'frantisekw@jetbrains.com', 4);
+INSERT INTO customers (id, customer_first_name, customer_last_name, customer_company, address, city, country, postal_code, customer_phone, fax, customer_email, support_rep_id) VALUES (5, N'František', N'Wichterlová', N'JetBrains s.r.o.', N'Klanova 9/506', N'Prague', N'Czech Republic', N'14700', N'+420 2 4172 5555', N'+420 2 4172 5555', N'frantisekw@jetbrains.com', 4);
 INSERT INTO customers (id, customer_first_name, customer_last_name, address, city, country, postal_code, customer_phone, customer_email, support_rep_id) VALUES (6, N'Helena', N'Holý', N'Rilská 3174/6', N'Prague', N'Czech Republic', N'14300', N'+420 2 4177 0449', N'hholy@gmail.com', 5);
 INSERT INTO customers (id, customer_first_name, customer_last_name, address, city, country, postal_code, customer_phone, customer_email, support_rep_id) VALUES (7, N'Astrid', N'Gruber', N'Rotenturmstraße 4, 1010 Innere Stadt', N'Vienne', N'Austria', N'1010', N'+43 01 5134505', N'astrid.gruber@apple.at', 5);
 INSERT INTO customers (id, customer_first_name, customer_last_name, address, city, country, postal_code, customer_phone, customer_email, support_rep_id) VALUES (8, N'Daan', N'Peeters', N'Grétrystraat 63', N'Brussels', N'Belgium', N'1000', N'+32 02 219 03 03', N'daan_peeters@apple.be', 4);
 INSERT INTO customers (id, customer_first_name, customer_last_name, address, city, country, postal_code, customer_phone, customer_email, support_rep_id) VALUES (9, N'Kara', N'Nielsen', N'Sønder Boulevard 51', N'Copenhagen', N'Denmark', N'1720', N'+453 3331 9991', N'kara.nielsen@jubii.dk', 4);
-INSERT INTO customers (id, customer_first_name, customer_last_name, customer_company, address, city, state, country, postal_code, phone, fax, email, support_rep_id) VALUES (10, N'Eduardo', N'Martins', N'Woodstock Discos', N'Rua Dr. Falcão Filho, 155', N'São Paulo', N'SP', N'Brazil', N'01007-010', N'+55 (11) 3033-5446', N'+55 (11) 3033-4564', N'eduardo@woodstock.com.br', 4);
-INSERT INTO customers (id, customer_first_name, customer_last_name, customer_company, address, city, state, country, postal_code, phone, fax, email, support_rep_id) VALUES (11, N'Alexandre', N'Rocha', N'Banco do Brasil S.A.', N'Av. Paulista, 2022', N'São Paulo', N'SP', N'Brazil', N'01310-200', N'+55 (11) 3055-3278', N'+55 (11) 3055-8131', N'alero@uol.com.br', 5);
-INSERT INTO customers (id, customer_first_name, customer_last_name, customer_company, address, city, state, country, postal_code, phone, fax, email, support_rep_id) VALUES (12, N'Roberto', N'Almeida', N'Riotur', N'Praça Pio X, 119', N'Rio de Janeiro', N'RJ', N'Brazil', N'20040-020', N'+55 (21) 2271-7000', N'+55 (21) 2271-7070', N'roberto.almeida@riotur.gov.br', 3);
-INSERT INTO customers (id, customer_first_name, customer_last_name, address, city, state, country, postal_code, phone, fax, email, support_rep_id) VALUES (13, N'Fernanda', N'Ramos', N'Qe 7 Bloco G', N'Brasília', N'DF', N'Brazil', N'71020-677', N'+55 (61) 3363-5547', N'+55 (61) 3363-7855', N'fernadaramos4@uol.com.br', 4);
-INSERT INTO customers (id, customer_first_name, customer_last_name, customer_company, address, city, state, country, postal_code, phone, fax, email, support_rep_id) VALUES (14, N'Mark', N'Philips', N'Telus', N'8210 111 ST NW', N'Edmonton', N'AB', N'Canada', N'T6G 2C7', N'+1 (780) 434-4554', N'+1 (780) 434-5565', N'mphilips12@shaw.ca', 5);
-INSERT INTO customers (id, customer_first_name, customer_last_name, customer_company, address, city, state, country, postal_code, phone, fax, email, support_rep_id) VALUES (15, N'Jennifer', N'Peterson', N'Rogers Canada', N'700 W Pender Street', N'Vancouver', N'BC', N'Canada', N'V6C 1G8', N'+1 (604) 688-2255', N'+1 (604) 688-8756', N'jenniferp@rogers.ca', 3);
-INSERT INTO customers (id, customer_first_name, customer_last_name, customer_company, address, city, state, country, postal_code, phone, fax, email, support_rep_id) VALUES (16, N'Frank', N'Harris', N'Google Inc.', N'1600 Amphitheatre Parkway', N'Mountain View', N'CA', N'USA', N'94043-1351', N'+1 (650) 253-0000', N'+1 (650) 253-0000', N'fharris@google.com', 4);
-INSERT INTO customers (id, customer_first_name, customer_last_name, customer_company, address, city, state, country, postal_code, phone, fax, email, support_rep_id) VALUES (17, N'Jack', N'Smith', N'Microsoft Corporation', N'1 Microsoft Way', N'Redmond', N'WA', N'USA', N'98052-8300', N'+1 (425) 882-8080', N'+1 (425) 882-8081', N'jacksmith@microsoft.com', 5);
-INSERT INTO customers (id, customer_first_name, customer_last_name, address, city, state, country, postal_code, phone, fax, email, support_rep_id) VALUES (18, N'Michelle', N'Brooks', N'627 Broadway', N'New York', N'NY', N'USA', N'10012-2612', N'+1 (212) 221-3546', N'+1 (212) 221-4679', N'michelleb@aol.com', 3);
-INSERT INTO customers (id, customer_first_name, customer_last_name, customer_company, address, city, state, country, postal_code, phone, fax, email, support_rep_id) VALUES (19, N'Tim', N'Goyer', N'Apple Inc.', N'1 Infinite Loop', N'Cupertino', N'CA', N'USA', N'95014', N'+1 (408) 996-1010', N'+1 (408) 996-1011', N'tgoyer@apple.com', 3);
+INSERT INTO customers (id, customer_first_name, customer_last_name, customer_company, address, city, state, country, postal_code, customer_phone, fax, customer_email, support_rep_id) VALUES (10, N'Eduardo', N'Martins', N'Woodstock Discos', N'Rua Dr. Falcão Filho, 155', N'São Paulo', N'SP', N'Brazil', N'01007-010', N'+55 (11) 3033-5446', N'+55 (11) 3033-4564', N'eduardo@woodstock.com.br', 4);
+INSERT INTO customers (id, customer_first_name, customer_last_name, customer_company, address, city, state, country, postal_code, customer_phone, fax, customer_email, support_rep_id) VALUES (11, N'Alexandre', N'Rocha', N'Banco do Brasil S.A.', N'Av. Paulista, 2022', N'São Paulo', N'SP', N'Brazil', N'01310-200', N'+55 (11) 3055-3278', N'+55 (11) 3055-8131', N'alero@uol.com.br', 5);
+INSERT INTO customers (id, customer_first_name, customer_last_name, customer_company, address, city, state, country, postal_code, customer_phone, fax, customer_email, support_rep_id) VALUES (12, N'Roberto', N'Almeida', N'Riotur', N'Praça Pio X, 119', N'Rio de Janeiro', N'RJ', N'Brazil', N'20040-020', N'+55 (21) 2271-7000', N'+55 (21) 2271-7070', N'roberto.almeida@riotur.gov.br', 3);
+INSERT INTO customers (id, customer_first_name, customer_last_name, address, city, state, country, postal_code, customer_phone, fax, customer_email, support_rep_id) VALUES (13, N'Fernanda', N'Ramos', N'Qe 7 Bloco G', N'Brasília', N'DF', N'Brazil', N'71020-677', N'+55 (61) 3363-5547', N'+55 (61) 3363-7855', N'fernadaramos4@uol.com.br', 4);
+INSERT INTO customers (id, customer_first_name, customer_last_name, customer_company, address, city, state, country, postal_code, customer_phone, fax, customer_email, support_rep_id) VALUES (14, N'Mark', N'Philips', N'Telus', N'8210 111 ST NW', N'Edmonton', N'AB', N'Canada', N'T6G 2C7', N'+1 (780) 434-4554', N'+1 (780) 434-5565', N'mphilips12@shaw.ca', 5);
+INSERT INTO customers (id, customer_first_name, customer_last_name, customer_company, address, city, state, country, postal_code, customer_phone, fax, customer_email, support_rep_id) VALUES (15, N'Jennifer', N'Peterson', N'Rogers Canada', N'700 W Pender Street', N'Vancouver', N'BC', N'Canada', N'V6C 1G8', N'+1 (604) 688-2255', N'+1 (604) 688-8756', N'jenniferp@rogers.ca', 3);
+INSERT INTO customers (id, customer_first_name, customer_last_name, customer_company, address, city, state, country, postal_code, customer_phone, fax, customer_email, support_rep_id) VALUES (16, N'Frank', N'Harris', N'Google Inc.', N'1600 Amphitheatre Parkway', N'Mountain View', N'CA', N'USA', N'94043-1351', N'+1 (650) 253-0000', N'+1 (650) 253-0000', N'fharris@google.com', 4);
+INSERT INTO customers (id, customer_first_name, customer_last_name, customer_company, address, city, state, country, postal_code, customer_phone, fax, customer_email, support_rep_id) VALUES (17, N'Jack', N'Smith', N'Microsoft Corporation', N'1 Microsoft Way', N'Redmond', N'WA', N'USA', N'98052-8300', N'+1 (425) 882-8080', N'+1 (425) 882-8081', N'jacksmith@microsoft.com', 5);
+INSERT INTO customers (id, customer_first_name, customer_last_name, address, city, state, country, postal_code, customer_phone, fax, customer_email, support_rep_id) VALUES (18, N'Michelle', N'Brooks', N'627 Broadway', N'New York', N'NY', N'USA', N'10012-2612', N'+1 (212) 221-3546', N'+1 (212) 221-4679', N'michelleb@aol.com', 3);
+INSERT INTO customers (id, customer_first_name, customer_last_name, customer_company, address, city, state, country, postal_code, customer_phone, fax, customer_email, support_rep_id) VALUES (19, N'Tim', N'Goyer', N'Apple Inc.', N'1 Infinite Loop', N'Cupertino', N'CA', N'USA', N'95014', N'+1 (408) 996-1010', N'+1 (408) 996-1011', N'tgoyer@apple.com', 3);
 INSERT INTO customers (id, customer_first_name, customer_last_name, address, city, state, country, postal_code, customer_phone, customer_email, support_rep_id) VALUES (20, N'Dan', N'Miller', N'541 Del Medio Avenue', N'Mountain View', N'CA', N'USA', N'94040-111', N'+1 (650) 644-3358', N'dmiller@comcast.com', 4);
 INSERT INTO customers (id, customer_first_name, customer_last_name, address, city, state, country, postal_code, customer_phone, customer_email, support_rep_id) VALUES (21, N'Kathy', N'Chase', N'801 W 4th Street', N'Reno', N'NV', N'USA', N'89503', N'+1 (775) 223-7665', N'kachase@hotmail.com', 5);
 INSERT INTO customers (id, customer_first_name, customer_last_name, address, city, state, country, postal_code, customer_phone, customer_email, support_rep_id) VALUES (22, N'Heather', N'Leacock', N'120 S Orange Ave', N'Orlando', N'FL', N'USA', N'32801', N'+1 (407) 999-7788', N'hleacock@gmail.com', 4);
@@ -4537,7 +4537,7 @@ INSERT INTO customers (id, customer_first_name, customer_last_name, address, cit
 INSERT INTO customers (id, customer_first_name, customer_last_name, address, city, country, postal_code, customer_phone, customer_email, support_rep_id) VALUES (42, N'Wyatt', N'Girard', N'9, Place Louis Barthou', N'Bordeaux', N'France', N'33000', N'+33 05 56 96 96 96', N'wyatt.girard@yahoo.fr', 3);
 INSERT INTO customers (id, customer_first_name, customer_last_name, address, city, country, postal_code, customer_phone, customer_email, support_rep_id) VALUES (43, N'Isabelle', N'Mercier', N'68, Rue Jouvence', N'Dijon', N'France', N'21000', N'+33 03 80 73 66 99', N'isabelle_mercier@apple.fr', 3);
 INSERT INTO customers (id, customer_first_name, customer_last_name, address, city, country, postal_code, customer_phone, customer_email, support_rep_id) VALUES (44, N'Terhi', N'Hämäläinen', N'Porthaninkatu 9', N'Helsinki', N'Finland', N'00530', N'+358 09 870 2000', N'terhi.hamalainen@apple.fi', 3);
-INSERT INTO customers (id, customer_first_name, customer_last_name, address, city, country, postal_code, email, support_rep_id) VALUES (45, N'Ladislav', N'Kovács', N'Erzsébet krt. 58.', N'Budapest', N'Hungary', N'H-1073', N'ladislav_kovacs@apple.hu', 3);
+INSERT INTO customers (id, customer_first_name, customer_last_name, address, city, country, postal_code, customer_email, support_rep_id) VALUES (45, N'Ladislav', N'Kovács', N'Erzsébet krt. 58.', N'Budapest', N'Hungary', N'H-1073', N'ladislav_kovacs@apple.hu', 3);
 INSERT INTO customers (id, customer_first_name, customer_last_name, address, city, state, country, customer_phone, customer_email, support_rep_id) VALUES (46, N'Hugh', N'O''Reilly', N'3 Chatham Street', N'Dublin', N'Dublin', N'Ireland', N'+353 01 6792424', N'hughoreilly@apple.ie', 3);
 INSERT INTO customers (id, customer_first_name, customer_last_name, address, city, state, country, postal_code, customer_phone, customer_email, support_rep_id) VALUES (47, N'Lucas', N'Mancini', N'Via Degli Scipioni, 43', N'Rome', N'RM', N'Italy', N'00192', N'+39 06 39733434', N'lucas.mancini@yahoo.it', 5);
 INSERT INTO customers (id, customer_first_name, customer_last_name, address, city, state, country, postal_code, customer_phone, customer_email, support_rep_id) VALUES (48, N'Johannes', N'Van der Berg', N'Lijnbaansgracht 120bg', N'Amsterdam', N'VV', N'Netherlands', N'1016', N'+31 020 6223130', N'johavanderberg@yahoo.nl', 5);
@@ -7207,24 +7207,24 @@ INSERT INTO invoice_lines (id, invoice_id, track_id, unit_price, quantity) VALUE
 INSERT INTO invoice_lines (id, invoice_id, track_id, unit_price, quantity) VALUES (2239, 411, 3163, 0.99, 1);
 INSERT INTO invoice_lines (id, invoice_id, track_id, unit_price, quantity) VALUES (2240, 412, 3177, 1.99, 1);
 
-INSERT INTO playlists (id, name) VALUES (1, N'Music');
-INSERT INTO playlists (id, name) VALUES (2, N'Movies');
-INSERT INTO playlists (id, name) VALUES (3, N'TV Shows');
-INSERT INTO playlists (id, name) VALUES (4, N'Audiobooks');
-INSERT INTO playlists (id, name) VALUES (5, N'90’s Music');
-INSERT INTO playlists (id, name) VALUES (6, N'Audiobooks');
-INSERT INTO playlists (id, name) VALUES (7, N'Movies');
-INSERT INTO playlists (id, name) VALUES (8, N'Music');
-INSERT INTO playlists (id, name) VALUES (9, N'Music Videos');
-INSERT INTO playlists (id, name) VALUES (10, N'TV Shows');
-INSERT INTO playlists (id, name) VALUES (11, N'Brazilian Music');
-INSERT INTO playlists (id, name) VALUES (12, N'Classical');
-INSERT INTO playlists (id, name) VALUES (13, N'Classical 101 - Deep Cuts');
-INSERT INTO playlists (id, name) VALUES (14, N'Classical 101 - Next Steps');
-INSERT INTO playlists (id, name) VALUES (15, N'Classical 101 - The Basics');
-INSERT INTO playlists (id, name) VALUES (16, N'Grunge');
-INSERT INTO playlists (id, name) VALUES (17, N'Heavy Metal Classic');
-INSERT INTO playlists (id, name) VALUES (18, N'On-The-Go 1');
+INSERT INTO playlists (id, playlist_name) VALUES (1, N'Music');
+INSERT INTO playlists (id, playlist_name) VALUES (2, N'Movies');
+INSERT INTO playlists (id, playlist_name) VALUES (3, N'TV Shows');
+INSERT INTO playlists (id, playlist_name) VALUES (4, N'Audiobooks');
+INSERT INTO playlists (id, playlist_name) VALUES (5, N'90’s Music');
+INSERT INTO playlists (id, playlist_name) VALUES (6, N'Audiobooks');
+INSERT INTO playlists (id, playlist_name) VALUES (7, N'Movies');
+INSERT INTO playlists (id, playlist_name) VALUES (8, N'Music');
+INSERT INTO playlists (id, playlist_name) VALUES (9, N'Music Videos');
+INSERT INTO playlists (id, playlist_name) VALUES (10, N'TV Shows');
+INSERT INTO playlists (id, playlist_name) VALUES (11, N'Brazilian Music');
+INSERT INTO playlists (id, playlist_name) VALUES (12, N'Classical');
+INSERT INTO playlists (id, playlist_name) VALUES (13, N'Classical 101 - Deep Cuts');
+INSERT INTO playlists (id, playlist_name) VALUES (14, N'Classical 101 - Next Steps');
+INSERT INTO playlists (id, playlist_name) VALUES (15, N'Classical 101 - The Basics');
+INSERT INTO playlists (id, playlist_name) VALUES (16, N'Grunge');
+INSERT INTO playlists (id, playlist_name) VALUES (17, N'Heavy Metal Classic');
+INSERT INTO playlists (id, playlist_name) VALUES (18, N'On-The-Go 1');
 
 INSERT INTO playlist_track (playlist_id, track_id) VALUES (1, 3402);
 INSERT INTO playlist_track (playlist_id, track_id) VALUES (1, 3389);
@@ -15988,7 +15988,7 @@ SELECT setval('"public"."films_id_seq"', 1000, true);
 -- ----------------------------
 CREATE TABLE "categories" (
 "id" int4 DEFAULT nextval('categories_id_seq'::regclass) NOT NULL,
-name varchar(25) COLLATE "default" NOT NULL,
+category_name varchar(25) COLLATE "default" NOT NULL,
 "last_update" timestamp(6) DEFAULT now() NOT NULL
 )
 WITH (OIDS=FALSE)
@@ -16246,7 +16246,7 @@ COMMIT;
 -- ----------------------------
 CREATE TABLE "films" (
 "id" int4 DEFAULT nextval('films_id_seq'::regclass) NOT NULL,
-title varchar(255) COLLATE "default" NOT NULL,
+film_title varchar(255) COLLATE "default" NOT NULL,
 "film_description" text COLLATE "default",
 "film_release_year" int,
 "film_language_id" int2 NOT NULL,
@@ -23791,7 +23791,7 @@ ALTER FUNCTION last_updated()
 -- ----------------------------
 -- Indexes structure for table actor
 -- ----------------------------
-CREATE INDEX "idx_actors_last_name" ON "actors" USING btree (last_name);
+CREATE INDEX "idx_actors_last_name" ON "actors" USING btree (actor_last_name);
 
 -- ----------------------------
 -- Triggers structure for table actor
@@ -23824,15 +23824,15 @@ ALTER TABLE "categories" ADD PRIMARY KEY ("id");
 -- Indexes structure for table film
 -- ----------------------------
 CREATE INDEX "films_fulltext_idx" ON "films" USING gist (fulltext);
-CREATE INDEX "idx_fk_language_id" ON "films" USING btree (language_id);
-CREATE INDEX "idx_title" ON "films" USING btree (title);
+CREATE INDEX "idx_fk_language_id" ON "films" USING btree (film_language_id);
+CREATE INDEX "idx_title" ON "films" USING btree (film_title);
 
 -- ----------------------------
 -- Triggers structure for table film
 -- ----------------------------
 CREATE TRIGGER "films_fulltext_trigger" BEFORE INSERT OR UPDATE ON "films"
 FOR EACH ROW
-EXECUTE PROCEDURE "tsvector_update_trigger"('fulltext', 'pg_catalog.english', 'title', 'description');
+EXECUTE PROCEDURE "tsvector_update_trigger"('fulltext', 'pg_catalog.english', 'film_title', 'film_description');
 CREATE TRIGGER "last_updated" BEFORE UPDATE ON "films"
 FOR EACH ROW
 EXECUTE PROCEDURE "last_updated"();
