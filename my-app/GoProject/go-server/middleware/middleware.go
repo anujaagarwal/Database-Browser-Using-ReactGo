@@ -14,7 +14,7 @@ import (
 
 // postgres database server details
 const (
-	host     = "localhost"
+	host     = "postgres"
 	port     = 5432
 	user     = "postgres"
 	password = "anuja"
@@ -32,7 +32,7 @@ func setupDB() *sql.DB {
 
 	CheckError(err)
 
-	// fmt.Println("Connected!")
+	fmt.Println("Connected!")
 
 	return db
 }

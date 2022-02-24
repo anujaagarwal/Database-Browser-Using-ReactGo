@@ -6,18 +6,24 @@ services:
         environment:
             - POSTGRES_DB=testdb
             - POSTGRES_PASSWORD=anuja
+        volumes:
+            - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+        ports:
+            - 5433:5432
     server:
         build: ./GoProject/go-server
         command: go run main.go
         volumes:
             - ./GoProject/go-server:/go/src/app
         ports:
-            - "8080:3000"
+            - "8000:8000"
 
         depends_on:
             - postgres
         environment:
             - POSTGRES_PASSWORD=anuja
+        
     client:
         build: ./Frontend
         command: npm start
@@ -31,6 +37,9 @@ services:
             - "9000:3000"
         depends_on: 
             - server
+        
+
+        
 
 
 
